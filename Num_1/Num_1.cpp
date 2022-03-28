@@ -74,7 +74,7 @@ void modifiedNewton() {
     vector <double> x_res = {};
     vector <double> fX_res = {};
 
-    if ((evaluate_modNew(curr_P) * evaluate_secDer_modNew(curr_P)) < 0) { cout << "Error\n"; exit(1); } // думаю, что можно выкинуть
+    if ((evaluate_modNew(curr_P) * evaluate_secDer_modNew(curr_P)) < 0) { cout << "Error\n"; exit(1); }
 
     while ((abs((curr_P - P_prev)) >= eps) && (abs(evaluate_modNew(curr_P)) >= eps)) {
         P_prev = curr_P;
